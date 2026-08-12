@@ -26,7 +26,7 @@ GPU-PinPower can simulate different GPU power conditions without requiring any h
 
 Example:
 
-```text
+```text after downloading the zip file. Extract all the files and right click the main.py file and run in terminal and write python main.py
 GPU-PinPower
 ================================
 MODE: ESTIMATED
