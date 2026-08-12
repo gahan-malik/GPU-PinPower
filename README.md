@@ -38,7 +38,7 @@ It estimates how power could be distributed across the individual power lines of
 
 GPU-PinPower can simulate different GPU power conditions without requiring any hardware.
 after you complete downloading the zip file, Extract it. Right-click the main.py file and run in terminal and write this code:python main.py 
-Example:
+< Example:
 
 ```text 
 ================================
