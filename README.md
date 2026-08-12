@@ -1,44 +1,41 @@
 # GPU-PinPower
 
-Monitor individual PCIe GPU power pins in real time. ⚡
+A Python tool for estimating and monitoring power distribution across individual PCIe GPU power pins. ⚡
 
 ## 🚧 Current Status
 
-The Python software simulator is working.
+GPU-PinPower currently runs as a **digital simulator**.
 
-## ✨ Features
+It estimates how power could be distributed across the individual power lines of a PCIe GPU connector.
 
-- Per-pin power calculation
-- Live simulated readings
+> ⚠️ These values are estimates, not real electrical measurements.
+
+## Features
+
+- Estimated per-pin power
+- Estimated voltage and current
+- Live monitoring
+- Power calculations
 - CSV logging
-- Python-based monitoring
+- Simulated pin imbalance detection
+- Python-based
 
-## 🔌 Hardware
+## Simulation
 
-Planned hardware:
+GPU-PinPower can simulate different GPU power conditions without requiring any hardware.
 
-- PCIe 8-pin measurement adapter
-- Current sensors
-- Voltage sensing
-- Microcontroller
-- USB communication
+Example:
 
-## 🗺️ Roadmap
+```text
+GPU-PinPower
+================================
+MODE: ESTIMATED
 
-- [x] Python simulator
-- [x] Live monitoring
-- [x] CSV logging
-- [ ] Sensor communication
-- [ ] Microcontroller firmware
-- [ ] Measurement PCB
-- [ ] Real GPU testing
+Pin 1   ~40.2 W
+Pin 2   ~39.7 W
+Pin 3   ~40.1 W
+================================
+TOTAL   ~120.0 W
 
-## ⚠️ Safety
-
-This project involves high-current GPU power connections.
-
-Do not connect experimental hardware to a powered GPU until the electrical design has been properly validated.
-
-## 📜 License
-
-TBD
+STATUS: NORMAL
+License : TBD
