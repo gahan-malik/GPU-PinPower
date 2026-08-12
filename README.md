@@ -1,7 +1,21 @@
-# GPU-PinPower
+## Platform Support
 
-A Python tool for estimating and monitoring power distribution across individual PCIe GPU power pins. ⚡
+GPU-PinPower is written in Python and is designed to work on:
 
+- Windows 10 / 11
+- Linux
+- MacOS
+- ChromeOS with Linux/Python support
+- Raspberry Pi OS
+- Google Colab
+
+> GPU-PinPower is currently a software-based simulator. It does not require a physical GPU or PCIe power connector to run.
+
+### 🧪 Current Development Platform
+
+GPU-PinPower is currently being developed and tested on Windows.
+
+Support for other platforms may depend on the Python version and installed dependencies.
 ## 🚧 Current Status
 
 GPU-PinPower currently runs as a **digital simulator**.
@@ -23,11 +37,10 @@ It estimates how power could be distributed across the individual power lines of
 ## Simulation
 
 GPU-PinPower can simulate different GPU power conditions without requiring any hardware.
-
+after you complete downloading the zip file, Extract it. Right-click the main.py file and run in terminal and write this code:python main.py 
 Example:
 
-```text after downloading the zip file. Extract all the files and right click the main.py file and run in terminal and write python main.py
-GPU-PinPower
+```text 
 ================================
 MODE: ESTIMATED
 
