@@ -1,1 +1,4 @@
 power_log.csv
+gpu_pinpower_log.csv
+__pycache__/
+*.pyc
