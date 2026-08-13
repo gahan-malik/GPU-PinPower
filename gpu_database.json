@@ -1,0 +1,22 @@
+[
+  {
+    "model": "RTX 5050",
+    "vendor": "NVIDIA",
+    "power": 130
+  },
+  {
+    "model": "RTX 4060",
+    "vendor": "NVIDIA",
+    "power": 115
+  },
+  {
+    "model": "RTX 3060",
+    "vendor": "NVIDIA",
+    "power": 170
+  },
+  {
+    "model": "GTX 1650",
+    "vendor": "NVIDIA",
+    "power": 75
+  }
+]
