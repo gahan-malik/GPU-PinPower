@@ -28,12 +28,8 @@ V1.1.0 adds:
 Initial public release.
 
 V1.0.0 introduced:
-
-* GPU detection
-* GPU power specification database
 * Estimated power distribution
 * Estimated voltage and current
-* Pin imbalance status
 * Live terminal output
 * Software-only simulation
 
