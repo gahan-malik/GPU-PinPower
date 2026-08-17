@@ -4,9 +4,9 @@ GPU-PinPower is a Python-based GPU detection and power estimation tool.
 
 It detects the GPU reported by the operating system, looks up its known power specification, and estimates how that power could be distributed across simulated GPU power lines.
 
-> ⚠️ GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
+>  GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
 
-## 🚀 V1.2.0
+##  V1.2.0
 
 V1.2.0 is a major GPU database and compatibility update.
 
@@ -84,13 +84,13 @@ GPU-PinPower is designed to work on:
 
 > GPU detection depends on information provided by the operating system and the tools available on that platform.
 
-### 🧪 Current Development Platform
+###  Current Development Platform
 
 GPU-PinPower is currently developed and tested on Windows.
 
 Support for other platforms may depend on the installed Python version and available system tools.
 
-## ⚡ Power Estimation
+##  Power Estimation
 
 GPU-PinPower uses a database of known GPU power specifications.
 
@@ -110,7 +110,7 @@ TOTAL     130.00 W      12.00 V       10.83 A
 
 These values are simulated and should not be treated as electrical measurements.
 
-## 📊 CSV Logging
+##  CSV Logging
 
 GPU-PinPower supports CSV logging for runtime data.
 
@@ -198,7 +198,7 @@ GPU-PinPower-v1.2.0/
 └── README.md
 ```
 
-## 🗃️ GPU Database
+##  GPU Database
 
 V1.2.0 expands the GPU database structure to support multiple GPU vendors and architectures.
 
