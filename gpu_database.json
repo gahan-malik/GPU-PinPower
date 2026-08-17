@@ -1,22 +1,13 @@
-[
-  {
-    "model": "RTX 5050",
-    "vendor": "NVIDIA",
-    "power": 130
-  },
-  {
-    "model": "RTX 4060",
-    "vendor": "NVIDIA",
-    "power": 115
-  },
-  {
-    "model": "RTX 3060",
-    "vendor": "NVIDIA",
-    "power": 170
-  },
-  {
-    "model": "GTX 1650",
-    "vendor": "NVIDIA",
-    "power": 75
-  }
-]
+{
+    "database_version": "1.0.0",
+    "gpus": [
+        {
+            "name": "NVIDIA GeForce RTX 5050",
+            "vendor": "NVIDIA",
+            "architecture": "Blackwell",
+            "type": "Desktop",
+            "power": 130,
+            "power_type": "TGP"
+        }
+    ]
+}
