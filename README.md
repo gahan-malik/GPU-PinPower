@@ -2,65 +2,85 @@
 
 GPU-PinPower is a Python-based GPU detection and power estimation tool.
 
-It detects the GPU reported by the operating system, looks up its known power specification, and simulates how that power could be distributed across individual GPU power lines.
+It detects the GPU reported by the operating system, looks up its known power specification, and estimates how that power could be distributed across simulated GPU power lines.
 
-> GPU-PinPower is currently a software-based simulator. Power, voltage, current, and pin distribution values are estimates, not real electrical measurements.
+> ⚠️ GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
 
-## Versions
+## 🚀 V1.2.0
 
-### V1.1.0
+V1.2.0 is a major GPU database and compatibility update.
 
-Current release.
+### What's New
 
-V1.1.0 adds:
+- Expanded GPU database
+- NVIDIA, AMD, Intel, and Apple Silicon database support
+- Improved GPU detection
+- GPU power specification lookup
+- Improved database handling
+- Expanded project structure
+- Updated platform support information
+- Updated documentation
 
-* CSV logging
-* Improved GPU information display
-* Estimated pin power distribution
-* Estimated voltage and current
-* Live terminal dashboard
-* Pin imbalance status
-* Improved platform support
-* Updated documentation
+V1.2.0 expands GPU-PinPower beyond the RTX 5050-focused support introduced in V1.1.0 and provides the foundation for broader GPU support.
 
-### V1.0.0
+## ⚠️ Important: Running the V1.2.0 ZIP
 
-Initial public release.
+The V1.2.0 download ZIP contains the main project inside the `GPU-PinPower-v1.2.0` folder.
 
-V1.0.0 introduced:
-* Estimated power distribution
-* Estimated voltage and current
-* Live terminal output
-* Software-only simulation
+After extracting the ZIP, open a terminal inside that folder and run:
+
+```text
+python main.py
+```
+
+On some systems, use:
+
+```text
+python3 main.py
+```
+
+> **Important:** The outer extracted folder also contains a `main.py`. For V1.2.0, run the `main.py` inside `GPU-PinPower-v1.2.0`.
+
+Example:
+
+```text
+GPU-PinPower-1.2.0/
+└── GPU-PinPower-1.2.0/
+    └── GPU-PinPower-v1.2.0/
+        ├── main.py
+        ├── gpu_database.py
+        ├── gpu_detection.py
+        └── ...
+```
 
 ## Features
 
-* Automatic GPU detection
-* NVIDIA GPU detection
-* AMD GPU detection
-* Intel GPU detection
-* Apple GPU detection
-* GPU power specification lookup
-* Estimated power distribution
-* Estimated voltage
-* Estimated current
-* Live terminal dashboard
-* Pin imbalance detection
-* CSV logging
-* Software-only operation
-* No physical GPU power connector required
+- Automatic GPU detection
+- NVIDIA GPU detection
+- AMD GPU detection
+- Intel GPU detection
+- Apple GPU detection
+- GPU power specification lookup
+- Estimated power distribution
+- Estimated voltage
+- Estimated current
+- Live terminal output
+- Pin imbalance detection
+- CSV logging
+- Software-only operation
+- No physical GPU power connector required
 
 ## Platform Support
 
 GPU-PinPower is designed to work on:
 
-* Windows 10 / 11
-* Linux
-* macOS
-* Apple Silicon Macs
-* ChromeOS with Linux/Python support
-* Raspberry Pi OS
-* Google Colab
+- Windows 10 / 11
+- Linux
+- macOS
+- Apple Silicon Macs
+- ChromeOS with Linux/Python support
+- Raspberry Pi OS
+- Google Colab
 
 > GPU detection depends on information provided by the operating system and the tools available on that platform.
 
@@ -74,9 +94,9 @@ Support for other platforms may depend on the installed Python version and avail
 
 GPU-PinPower uses a database of known GPU power specifications.
 
-It then estimates how the GPU's specified power could be distributed across simulated power lines.
+It estimates how the GPU's specified power could be distributed across simulated power lines.
 
-The voltage and current values are calculated from these estimated power values.
+Voltage and current values are calculated from these estimated power values.
 
 For example, a GPU with a 130 W power specification may be displayed as approximately:
 
@@ -92,60 +112,40 @@ These values are simulated and should not be treated as electrical measurements.
 
 ## 📊 CSV Logging
 
-V1.1.0 introduces automatic CSV logging.
+GPU-PinPower supports CSV logging for runtime data.
 
-While GPU-PinPower is running, readings are saved every second to:
+When logging is enabled, readings can be saved to:
 
 ```text
 gpu_pinpower_log.csv
 ```
 
-The CSV contains:
-
-* Timestamp
-* GPU name
-* Vendor
-* Operating mode
-* Pin 1 power
-* Pin 2 power
-* Pin 3 power
-* Total power
-* Voltage
-* Pin 1 current
-* Pin 2 current
-* Pin 3 current
-* Total current
-* Status
-
-New sessions are appended to the existing CSV file instead of overwriting previous logs.
-
-The CSV file is automatically ignored by Git so runtime logs are not uploaded to the repository.
+Runtime logs are ignored by Git and are not uploaded to the repository.
 
 ## Requirements
 
-* Python 3
-* A supported operating system
-* No external Python packages are required for the simulator
+- Python 3
+- A supported operating system
+- No external Python packages are required for the core simulator
 
 ## How to Use
 
-Download the project ZIP file and extract it.
-
-Open a terminal in the extracted GPU-PinPower folder.
-
-Run:
+1. Download the project ZIP from the GitHub Releases page.
+2. Extract the ZIP.
+3. Open a terminal inside the `GPU-PinPower-v1.2.0` folder.
+4. Run:
 
 ```text
 python main.py
 ```
 
-On some systems, use:
+On some systems:
 
 ```text
 python3 main.py
 ```
 
-GPU-PinPower will detect the first GPU reported by the operating system and display its estimated power information.
+GPU-PinPower will detect the GPU reported by the operating system and display its available power information.
 
 Press:
 
@@ -157,7 +157,7 @@ to stop the program.
 
 ## Windows Example
 
-Open the project folder in File Explorer.
+Open the `GPU-PinPower-v1.2.0` folder in File Explorer.
 
 Right-click inside the folder and open a terminal.
 
@@ -167,73 +167,53 @@ Then run:
 python main.py
 ```
 
-The program will start the live dashboard.
-
 ## Example Output
 
 ```text
-==============================================
-              GPU-PinPower v1.1.0
-==============================================
+==============================
+       GPU-PinPower V1.2.0
+==============================
 
-GPU:              NVIDIA GeForce RTX 5050
-Vendor:           NVIDIA
-Power Spec:       130 W
-
-MODE:              ESTIMATED
-
-----------------------------------------------
-PIN       POWER        VOLTAGE       CURRENT
-----------------------------------------------
-Pin 1      43.21 W      12.00 V        3.60 A
-Pin 2      43.84 W      12.00 V        3.65 A
-Pin 3      42.95 W      12.00 V        3.58 A
-----------------------------------------------
-TOTAL     130.00 W      12.00 V       10.83 A
-----------------------------------------------
-
-STATUS: NORMAL
-
-CSV: Logging to gpu_pinpower_log.csv
-
-⚠ Estimated values, not electrical measurements.
-Press Ctrl+C to stop.
+GPU: NVIDIA GeForce RTX 5050
+Vendor: NVIDIA
+Power: 130 W
 ```
+
+The exact output depends on the detected GPU and the available database information.
 
 ## Project Files
 
+The V1.2.0 project contains the main program, GPU detection code, and GPU database modules.
+
 ```text
-GPU-PinPower/
+GPU-PinPower-v1.2.0/
 ├── main.py
-├── README.md
-└── .gitignore
+├── GPU-PinPower.py
+├── gpu_detection.py
+├── gpu_database.py
+├── gpu_database.json
+├── AMDdatabase.py
+├── Inteldatabase.py
+├── AppleSiliconDatabase.py
+└── README.md
 ```
 
-`gpu_pinpower_log.csv` is generated automatically when GPU-PinPower runs and is not included in the repository.
+## 🗃️ GPU Database
 
-## Supported GPU Database
+V1.2.0 expands the GPU database structure to support multiple GPU vendors and architectures.
 
-The current built-in database contains:
-
-| GPU      | Vendor | Power Specification |
-| -------- | ------ | ------------------: |
-| RTX 5050 | NVIDIA |               130 W |
-| RTX 4060 | NVIDIA |               115 W |
-| RTX 3060 | NVIDIA |               170 W |
-| GTX 1650 | NVIDIA |                75 W |
-
-GPU models that are detected but not included in the database will be reported as unsupported for power estimation.
+The database contains power specifications used for software estimation. GPU models that are detected but do not have matching database information may report unavailable power information.
 
 ## ⚠️ Important Notice
 
 GPU-PinPower does **not** directly measure:
 
-* GPU connector voltage
-* GPU connector current
-* Actual pin power
-* Actual GPU power consumption
+- GPU connector voltage
+- GPU connector current
+- Actual pin power
+- Actual GPU power consumption
 
-The displayed values are estimates generated by the software.
+The displayed values are estimates generated by software.
 
 Do not use GPU-PinPower as an electrical testing or hardware safety instrument.
 
@@ -241,12 +221,12 @@ Do not use GPU-PinPower as an electrical testing or hardware safety instrument.
 
 Possible future features include:
 
-* More GPUs in the database
-* Real hardware telemetry where supported
-* Graphs and data visualization
-* Advanced logging options
-* Additional operating-system support
-* More detailed power analysis
+- More GPUs in the database
+- Real hardware telemetry where supported
+- Graphs and data visualization
+- Advanced logging options
+- Additional operating-system support
+- More detailed power analysis
 
 ## License
 
