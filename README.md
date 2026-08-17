@@ -4,9 +4,9 @@ GPU-PinPower is a Python-based GPU detection and power estimation tool.
 
 It detects the GPU reported by the operating system, looks up its known power specification, and estimates how that power could be distributed across simulated GPU power lines.
 
-> ⚠️ GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
+> GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
 
-## 🚀 V1.2.0
+## V1.2.0
 
 V1.2.0 is a major GPU database and compatibility update.
 
@@ -29,7 +29,7 @@ V1.2.0 expands GPU-PinPower beyond the RTX 5050-focused support introduced in V1
 - A supported operating system
 - No external Python packages are required for the core simulator
 
-> ⚠️ **Important:** Python must be installed on your computer and available from your terminal. Having Python available only through an editor such as VS Code is not enough to run `python main.py` from a normal PowerShell or Command Prompt window.
+> Python must be installed on your computer and available from your terminal. Having Python available only through an editor such as VS Code is not enough to run `python main.py` from a normal PowerShell or Command Prompt window.
 
 ## How to Use
 
@@ -91,13 +91,13 @@ GPU-PinPower is designed to work on:
 
 > GPU detection depends on information provided by the operating system and the tools available on that platform.
 
-### 🧪 Current Development Platform
+### Current Development Platform
 
 GPU-PinPower is currently developed and tested on Windows.
 
 Support for other platforms may depend on the installed Python version and available system tools.
 
-## ⚡ Power Estimation
+## Power Estimation
 
 GPU-PinPower uses a database of known GPU power specifications.
 
@@ -117,7 +117,7 @@ TOTAL     130.00 W      12.00 V       10.83 A
 
 These values are simulated and should not be treated as electrical measurements.
 
-## 📊 CSV Logging
+## CSV Logging
 
 GPU-PinPower supports CSV logging for runtime data.
 
@@ -172,13 +172,13 @@ GPU-PinPower-v1.2.0/
 └── README.md
 ```
 
-## 🗃️ GPU Database
+## GPU Database
 
 V1.2.0 expands the GPU database structure to support multiple GPU vendors and architectures.
 
 The database contains power specifications used for software estimation. GPU models that are detected but do not have matching database information may report unavailable power information.
 
-## ⚠️ Important Notice
+## Important Notice
 
 GPU-PinPower does **not** directly measure:
 
