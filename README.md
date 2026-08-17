@@ -4,9 +4,9 @@ GPU-PinPower is a Python-based GPU detection and power estimation tool.
 
 It detects the GPU reported by the operating system, looks up its known power specification, and estimates how that power could be distributed across simulated GPU power lines.
 
->  GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
+> ⚠️ GPU-PinPower is a software-based simulator. Power, voltage, current, and pin-distribution values are estimates, not real electrical measurements.
 
-##  V1.2.0
+## 🚀 V1.2.0
 
 V1.2.0 is a major GPU database and compatibility update.
 
@@ -23,11 +23,22 @@ V1.2.0 is a major GPU database and compatibility update.
 
 V1.2.0 expands GPU-PinPower beyond the RTX 5050-focused support introduced in V1.1.0 and provides the foundation for broader GPU support.
 
-## ⚠️ Important: Running the V1.2.0 ZIP
+## Requirements
 
-The V1.2.0 download ZIP contains the main project inside the `GPU-PinPower-v1.2.0` folder.
+- Python 3
+- A supported operating system
+- No external Python packages are required for the core simulator
 
-After extracting the ZIP, open a terminal inside that folder and run:
+> ⚠️ **Important:** Python must be installed on your computer and available from your terminal. Having Python available only through an editor such as VS Code is not enough to run `python main.py` from a normal PowerShell or Command Prompt window.
+
+## How to Use
+
+1. Install Python 3 on your computer.
+2. Make sure Python is available from your terminal.
+3. Download the GPU-PinPower ZIP from the GitHub Releases page.
+4. Extract the ZIP.
+5. Open a terminal in the extracted GPU-PinPower folder.
+6. Run:
 
 ```text
 python main.py
@@ -39,19 +50,15 @@ On some systems, use:
 python3 main.py
 ```
 
-> **Important:** The outer extracted folder also contains a `main.py`. For V1.2.0, run the `main.py` inside `GPU-PinPower-v1.2.0`.
+GPU-PinPower will detect the GPU reported by the operating system and display its available power information.
 
-Example:
+Press:
 
 ```text
-GPU-PinPower-1.2.0/
-└── GPU-PinPower-1.2.0/
-    └── GPU-PinPower-v1.2.0/
-        ├── main.py
-        ├── gpu_database.py
-        ├── gpu_detection.py
-        └── ...
+Ctrl+C
 ```
+
+to stop the program.
 
 ## Features
 
@@ -84,13 +91,13 @@ GPU-PinPower is designed to work on:
 
 > GPU detection depends on information provided by the operating system and the tools available on that platform.
 
-###  Current Development Platform
+### 🧪 Current Development Platform
 
 GPU-PinPower is currently developed and tested on Windows.
 
 Support for other platforms may depend on the installed Python version and available system tools.
 
-##  Power Estimation
+## ⚡ Power Estimation
 
 GPU-PinPower uses a database of known GPU power specifications.
 
@@ -110,7 +117,7 @@ TOTAL     130.00 W      12.00 V       10.83 A
 
 These values are simulated and should not be treated as electrical measurements.
 
-##  CSV Logging
+## 📊 CSV Logging
 
 GPU-PinPower supports CSV logging for runtime data.
 
@@ -122,42 +129,9 @@ gpu_pinpower_log.csv
 
 Runtime logs are ignored by Git and are not uploaded to the repository.
 
-## Requirements
-
-- Python 3
-- A supported operating system
-- No external Python packages are required for the core simulator
-
-## How to Use
-
-1. Download the project ZIP from the GitHub Releases page.
-2. Extract the ZIP.
-3. Open a terminal inside the `GPU-PinPower-v1.2.0` folder.
-4. Run:
-
-```text
-python main.py
-```
-
-On some systems:
-
-```text
-python3 main.py
-```
-
-GPU-PinPower will detect the GPU reported by the operating system and display its available power information.
-
-Press:
-
-```text
-Ctrl+C
-```
-
-to stop the program.
-
 ## Windows Example
 
-Open the `GPU-PinPower-v1.2.0` folder in File Explorer.
+Open the GPU-PinPower folder in File Explorer.
 
 Right-click inside the folder and open a terminal.
 
@@ -198,7 +172,7 @@ GPU-PinPower-v1.2.0/
 └── README.md
 ```
 
-##  GPU Database
+## 🗃️ GPU Database
 
 V1.2.0 expands the GPU database structure to support multiple GPU vendors and architectures.
 
